@@ -1,6 +1,7 @@
 <template>
-    <div>
-        <input v-model="pattern" placeholder="Enter pattern" class="pattern-box" type="text">
+    <div class="pattern-box-wrapper">
+        <input autofocus v-model="pattern" placeholder="Enter pattern" class="pattern-box" type="text">
+        <p v-show="error" class="error-text">{{ error }}</p>
     </div>
 </template>
 
@@ -9,12 +10,20 @@ import { mapMutations, mapGetters } from 'vuex';
 export default {
   data() {
     return {
-      pattern: ''
+      pattern: '',
+      error: ''
     };
   },
+  computed: mapGetters(['error']),
   watch: {
     pattern(value) {
-      this.updatePattern(value);
+      try {
+        new RegExp(value);
+        this.updatePattern(value);
+        this.error = '';
+      } catch (error) {
+        this.error = error.message.split(':')[0];
+      }
     }
   },
   methods: mapMutations(['updatePattern'])
@@ -28,9 +37,21 @@ export default {
   min-height: 46px;
   background: transparent;
   color: #fff;
-  padding: 4rem 25px;
+  padding: 2.3rem 25px;
   border: 0;
   outline: none;
-  border-bottom: 1px solid #f7f7f742;
+}
+.pattern-box-wrapper {
+  border-bottom: 1px solid #f7f7f742 !important;
+  position: relative;
+}
+.error-text {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  color: #d6d7cc;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 1px;
 }
 </style>
