@@ -1,9 +1,15 @@
 <template>
   <div id="app">
-    App
+    <app-regex-box></app-regex-box>
   </div>
 </template>
 
 <script>
-export default {};
+import appRegexBox from './components/RegexBox';
+
+export default {
+  components: {
+    appRegexBox
+  }
+};
 </script>
