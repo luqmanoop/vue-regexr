@@ -1,6 +1,25 @@
 <template>
-    <input placeholder="Enter pattern" class="pattern-box" type="text">
+    <div>
+        <input v-model="pattern" placeholder="Enter pattern" class="pattern-box" type="text">
+    </div>
 </template>
+
+<script>
+import { mapMutations, mapGetters } from 'vuex';
+export default {
+  data() {
+    return {
+      pattern: ''
+    };
+  },
+  watch: {
+    pattern(value) {
+      this.updatePattern(value);
+    }
+  },
+  methods: mapMutations(['updatePattern'])
+};
+</script>
 
 <style scoped>
 .pattern-box {

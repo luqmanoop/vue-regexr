@@ -1,12 +1,30 @@
 <template>
     <div class="text-box">
         <div class="backdrop">
-            <div class="matches"></div>
+            <div class="matches" v-html="matches"></div>
         </div>
-        <textarea placeholder="Enter text to check matches"></textarea>
+        <textarea v-model="text" placeholder="Enter text to check matches"></textarea>
     </div>
 </template>
 
+<script>
+import { mapMutations, mapGetters } from 'vuex';
+
+export default {
+  data() {
+    return {
+      text: ''
+    };
+  },
+  computed: mapGetters(['matches']),
+  watch: {
+    text(value) {
+      this.updateText(value);
+    }
+  },
+  methods: mapMutations(['updateText'])
+};
+</script>
 <style scoped>
 .text-box {
   height: 400px;
@@ -28,12 +46,17 @@ textarea {
   background-color: transparent;
   outline: none;
   border: 0;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .backdrop {
   z-index: 1;
   pointer-events: none;
+}
+
+.matches,
+textarea {
+  font: 16px 'Open Sans', sans-serif;
 }
 
 textarea {
@@ -45,8 +68,10 @@ textarea {
 
 /* dynamically generated content style with deep selector */
 .matches >>> mark {
-  border-radius: 3px;
   color: transparent;
   background-color: #9e3cc0;
+}
+.matches >>> mark:nth-child(even) {
+  background-color: #3c7fc2;
 }
 </style>
