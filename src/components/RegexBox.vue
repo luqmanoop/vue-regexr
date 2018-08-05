@@ -16,3 +16,31 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+*,
+*::before,
+*::after {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+}
+
+.regex-box {
+  max-width: 700px;
+  margin: 5rem auto;
+  background-color: #001221;
+  border-radius: 5px;
+}
+</style>
