@@ -25,7 +25,7 @@ export default {
   methods: mapMutations(['updateText'])
 };
 </script>
-<style scoped>
+<style>
 .text-box {
   height: 400px;
   position: relative;
@@ -46,7 +46,7 @@ textarea {
   background-color: transparent;
   outline: none;
   border: 0;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .backdrop {
@@ -56,22 +56,27 @@ textarea {
 
 .matches,
 textarea {
-  font: 16px 'Open Sans', sans-serif;
+  font: inherit;
 }
 
 textarea {
   position: absolute;
   z-index: 2;
   resize: none;
-  color: #d6d7cc;
+  color: #fff;
+}
+
+.matches {
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 /* dynamically generated content style with deep selector */
-.matches >>> mark {
+.matches mark {
   color: transparent;
   background-color: #9e3cc0;
 }
-.matches >>> mark:nth-child(even) {
+.matches mark:nth-child(even) {
   background-color: #3c7fc2;
 }
 </style>

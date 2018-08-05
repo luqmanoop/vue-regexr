@@ -25,16 +25,13 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font: 16px 'Open Sans', sans-serif;
 }
 
 body,
 html {
   width: 100%;
   height: 100%;
-}
-
-body {
-  font-size: 16px;
 }
 
 .regex-box {

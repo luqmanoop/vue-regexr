@@ -21,13 +21,13 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .pattern-box {
   width: 100%;
-  font-size: inherit;
+  font: inherit;
   min-height: 46px;
   background: transparent;
-  color: #d6d7cc;
+  color: #fff;
   padding: 4rem 25px;
   border: 0;
   outline: none;
