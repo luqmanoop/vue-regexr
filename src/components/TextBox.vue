@@ -1,9 +1,9 @@
 <template>
   <div class="text-box">
-    <div class="backdrop">
+    <div ref="backdrop" class="backdrop">
       <div class="matches" v-html="matches"></div>
     </div>
-    <textarea v-model="text" placeholder="Enter text to check matches"></textarea>
+    <textarea ref="text" v-model="text" placeholder="Enter text to check matches" @scroll="handleScroll"></textarea>
   </div>
 </template>
 
@@ -20,9 +20,15 @@ export default {
   watch: {
     text(value) {
       this.updateText(value);
+      this.handleScroll();
     }
   },
-  methods: mapMutations(['updateText'])
+  methods: {
+    ...mapMutations(['updateText']),
+    handleScroll(e) {
+      this.$refs.backdrop.scrollTop = this.$refs.text.scrollTop;
+    }
+  }
 };
 </script>
 <style>
