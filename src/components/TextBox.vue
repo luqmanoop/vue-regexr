@@ -35,6 +35,7 @@ export default {
 .text-box {
   flex-grow: 1;
   width: 100%;
+  overflow: hidden;
   position: relative;
   background-color: #282a36;
 }
@@ -73,6 +74,18 @@ textarea {
   z-index: 2;
   resize: none;
   color: #fff;
+}
+textarea::-webkit-scrollbar {
+  background: #282a36;
+  width: 17px !important;
+}
+
+textarea::-webkit-scrollbar-track {
+  border-radius: 10px !important;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  border-radius: 10px !important;
 }
 
 .matches {

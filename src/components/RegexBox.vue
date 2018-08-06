@@ -61,6 +61,23 @@ html {
 
 aside {
   width: 300px;
-  height: 300px;
+  padding: 1.5rem;
+  border-left: 1px solid #ffffff31;
+  overflow-y: scroll;
+}
+
+aside::-webkit-scrollbar {
+  background: #3f4545;
+  width: 10px !important;
+}
+
+aside::-webkit-scrollbar-track {
+  border-radius: 10px !important;
+}
+
+aside::-webkit-scrollbar-thumb {
+  border-radius: 10px !important;
+  -webkit-box-shadow: inset 0 0 6px rgba(54, 52, 52, 0.925) !important;
+  box-shadow: inset 0 0 6px rgba(54, 52, 52, 0.863) !important;
 }
 </style>
