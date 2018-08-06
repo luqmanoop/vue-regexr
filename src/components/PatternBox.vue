@@ -21,7 +21,7 @@ export default {
         this.updatePattern(value);
         this.error = '';
       } catch (error) {
-        this.error = error.message.split(':')[0];
+        this.error = 'Expression is invalid';
       }
     }
   },
