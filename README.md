@@ -1,6 +1,12 @@
-# vue-regexr
+# Vue Regexr
 
-## A simple, beautiful tool for playing with regular expressions in real-time.
+A simple, beautiful tool for learning, testing and playing with Regular Expressions in real-time.
+
+Demo available here https://codeshifu.github.io/vue-regexr
+
+## About
+
+[Vue Regexr](https://codeshifu.github.io/vue-regexr) is an online tool that helps you learn, test and play with Regular Expressions. It has a beautiful interface with support for real-time test results update.
 
 ![vue regexr app screenshot](https://raw.githubusercontent.com/codeshifu/vue-regexr/master/screenshots/screenshot.png)
 
@@ -16,17 +22,7 @@ yarn install
 yarn run serve
 ```
 
-### Compiles and minifies for production
-
-```
-yarn run build
-```
-
-### Lints and fixes files
-
-```
-yarn run lint
-```
+## License
 
 MIT License
 
