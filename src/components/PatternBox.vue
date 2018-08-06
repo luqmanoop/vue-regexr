@@ -31,7 +31,7 @@ export default {
 
 <style>
 .pattern-box {
-  width: 500px;
+  width: 100%;
   font: inherit;
   min-height: 46px;
   background: transparent;

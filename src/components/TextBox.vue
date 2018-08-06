@@ -33,7 +33,8 @@ export default {
 </script>
 <style>
 .text-box {
-  height: 400px;
+  flex-grow: 1;
+  width: 100%;
   position: relative;
   background-color: #282a36;
 }
@@ -52,6 +53,7 @@ textarea {
   background-color: transparent;
   outline: none;
   border: 0;
+  overflow: auto;
   letter-spacing: 1px;
 }
 
@@ -66,6 +68,7 @@ textarea {
 }
 
 textarea {
+  display: block;
   position: absolute;
   z-index: 2;
   resize: none;
@@ -75,6 +78,7 @@ textarea {
 .matches {
   white-space: pre-wrap;
   word-wrap: break-word;
+  color: transparent;
 }
 
 /* dynamically generated content style with deep selector */

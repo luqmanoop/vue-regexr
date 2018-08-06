@@ -1,18 +1,25 @@
 <template>
   <div class="regex-box">
-    <app-pattern-box></app-pattern-box>
-    <app-text-box></app-text-box>
+    <div class="main">
+      <app-pattern-box></app-pattern-box>
+      <app-text-box></app-text-box>
+    </div>
+    <aside>
+      <app-side-bar></app-side-bar>
+    </aside>
   </div>
 </template>
 
 <script>
 import appTextBox from './TextBox';
 import appPatternBox from './PatternBox';
+import appSideBar from './SideBar';
 
 export default {
   components: {
     appTextBox,
-    appPatternBox
+    appPatternBox,
+    appSideBar
   }
 };
 </script>
@@ -35,10 +42,25 @@ html {
 }
 
 .regex-box {
-  max-width: 700px;
-  margin: 5rem auto;
   background-color: #001221;
-  border-radius: 5px;
+  display: flex;
+  width: 850px;
+  height: 500px;
+  margin: 5rem auto;
+  position: relative;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid;
   box-shadow: 0px 1rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+}
+
+aside {
+  width: 300px;
+  height: 300px;
 }
 </style>
