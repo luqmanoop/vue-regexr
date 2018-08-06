@@ -14,7 +14,6 @@ export default {
       error: ''
     };
   },
-  computed: mapGetters(['error']),
   watch: {
     pattern(value) {
       try {
@@ -32,7 +31,7 @@ export default {
 
 <style>
 .pattern-box {
-  width: 100%;
+  width: 500px;
   font: inherit;
   min-height: 46px;
   background: transparent;
