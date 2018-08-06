@@ -37,7 +37,7 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font: 16px 'Open Sans', sans-serif;
+  font: 14px 'Open Sans', sans-serif;
 }
 
 body,
