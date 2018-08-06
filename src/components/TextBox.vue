@@ -37,7 +37,7 @@ export default {
   width: 100%;
   overflow: hidden;
   position: relative;
-  background-color: #282a36;
+  background-color: #011627;
 }
 
 .text-box * {
