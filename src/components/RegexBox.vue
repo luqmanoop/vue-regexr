@@ -1,12 +1,15 @@
 <template>
-  <div class="regex-box">
-    <div class="main">
-      <app-pattern-box></app-pattern-box>
-      <app-text-box></app-text-box>
+  <div>
+    <div class="regex-box">
+      <div class="main">
+        <app-pattern-box></app-pattern-box>
+        <app-text-box></app-text-box>
+      </div>
+      <aside>
+        <app-side-bar></app-side-bar>
+      </aside>
     </div>
-    <aside>
-      <app-side-bar></app-side-bar>
-    </aside>
+    <app-footer></app-footer>
   </div>
 </template>
 
@@ -14,12 +17,14 @@
 import appTextBox from './TextBox';
 import appPatternBox from './PatternBox';
 import appSideBar from './SideBar';
+import appFooter from './Footer';
 
 export default {
   components: {
     appTextBox,
     appPatternBox,
-    appSideBar
+    appSideBar,
+    appFooter
   }
 };
 </script>
