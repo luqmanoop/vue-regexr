@@ -48,9 +48,12 @@ html {
   height: 500px;
   margin: 5rem auto;
   position: relative;
-  border-radius: 5px 0 0 5px;
-  border: 1px solid;
-  box-shadow: 0px 1rem 0.8rem rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  transition: all 0.25s linear;
+}
+.regex-box:hover {
+  box-shadow: 0.4rem 1.4rem 1.4rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
 }
 
 .main {
