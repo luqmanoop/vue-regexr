@@ -1,8 +1,8 @@
 <template>
-    <div class="regex-box">
-        <app-pattern-box></app-pattern-box>
-        <app-text-box></app-text-box>
-    </div>
+  <div class="regex-box">
+    <app-pattern-box></app-pattern-box>
+    <app-text-box></app-text-box>
+  </div>
 </template>
 
 <script>
@@ -39,5 +39,6 @@ html {
   margin: 5rem auto;
   background-color: #001221;
   border-radius: 5px;
+  box-shadow: 0px 1rem 0.8rem rgba(0, 0, 0, 0.2);
 }
 </style>

@@ -1,10 +1,10 @@
 <template>
-    <div class="text-box">
-        <div class="backdrop">
-            <div class="matches" v-html="matches"></div>
-        </div>
-        <textarea v-model="text" placeholder="Enter text to check matches"></textarea>
+  <div class="text-box">
+    <div class="backdrop">
+      <div class="matches" v-html="matches"></div>
     </div>
+    <textarea v-model="text" placeholder="Enter text to check matches"></textarea>
+  </div>
 </template>
 
 <script>
@@ -29,7 +29,7 @@ export default {
 .text-box {
   height: 400px;
   position: relative;
-  background-color: #011627;
+  background-color: #282a36;
 }
 
 .text-box * {

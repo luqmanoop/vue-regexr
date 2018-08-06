@@ -1,8 +1,8 @@
 <template>
-    <div class="pattern-box-wrapper">
-        <input autofocus v-model="pattern" placeholder="Enter pattern" class="pattern-box" type="text">
-        <p v-show="error" class="error-text">{{ error }}</p>
-    </div>
+  <div class="pattern-box-wrapper">
+    <input autofocus v-model="pattern" placeholder="Enter pattern" class="pattern-box" type="text">
+    <p v-show="error" class="error-text">{{ error }}</p>
+  </div>
 </template>
 
 <script>
@@ -36,13 +36,12 @@ export default {
   font: inherit;
   min-height: 46px;
   background: transparent;
-  color: #fff;
+  color: #d6d7cc;
   padding: 2.3rem 25px;
   border: 0;
   outline: none;
 }
 .pattern-box-wrapper {
-  border-bottom: 1px solid #f7f7f742 !important;
   position: relative;
 }
 .error-text {
