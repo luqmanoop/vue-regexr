@@ -4,6 +4,7 @@
       <div class="main">
         <app-pattern-box></app-pattern-box>
         <app-text-box></app-text-box>
+        <app-flags></app-flags>
       </div>
       <aside>
         <app-side-bar></app-side-bar>
@@ -16,6 +17,7 @@
 <script>
 import appTextBox from './TextBox';
 import appPatternBox from './PatternBox';
+import appFlags from './Flags';
 import appSideBar from './SideBar';
 import appFooter from './Footer';
 
@@ -23,6 +25,7 @@ export default {
   components: {
     appTextBox,
     appPatternBox,
+    appFlags,
     appSideBar,
     appFooter
   }
