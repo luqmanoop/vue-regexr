@@ -20,25 +20,19 @@ export default new Vuex.Store({
     text({ text }) {
       return text;
     },
-    matches({ matches }) {
-      return matches;
+    matches({ text, pattern, flags }) {
+      return getMatches(text, pattern, flags);
     }
   },
   mutations: {
     updatePattern(state, payload) {
       state.pattern = payload;
-      const { text, pattern, flags } = state;
-      state.matches = getMatches(text, pattern, flags);
     },
     updateText(state, payload) {
       state.text = payload;
-      const { text, pattern, flags } = state;
-      state.matches = getMatches(text, pattern, flags);
     },
     updateFlags(state, payload) {
       state.flags = payload;
-      const { text, pattern, flags } = state;
-      state.matches = getMatches(text, pattern, flags);
     }
   }
 });
