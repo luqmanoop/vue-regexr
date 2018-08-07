@@ -7,9 +7,13 @@ export default new Vuex.Store({
   state: {
     pattern: '',
     text: '',
-    matches: ''
+    matches: '',
+    flags: 'g'
   },
   getters: {
+    flags({ flags }) {
+      return flags;
+    },
     pattern({ pattern }) {
       return pattern;
     },
@@ -21,19 +25,26 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    updatePattern(state, value) {
-      state.pattern = value;
-      state.matches = getMatches(state.text, state.pattern);
+    updatePattern(state, payload) {
+      state.pattern = payload;
+      const { text, pattern, flags } = state;
+      state.matches = getMatches(text, pattern, flags);
     },
-    updateText(state, value) {
-      state.text = value;
-      state.matches = getMatches(state.text, state.pattern);
+    updateText(state, payload) {
+      state.text = payload;
+      const { text, pattern, flags } = state;
+      state.matches = getMatches(text, pattern, flags);
+    },
+    updateFlags(state, payload) {
+      state.flags = payload;
+      const { text, pattern, flags } = state;
+      state.matches = getMatches(text, pattern, flags);
     }
   }
 });
 
 // helper
-const getMatches = (text, pattern) =>
+const getMatches = (text, pattern, flags) =>
   text
     .replace(/\n$/g, '\n\n')
-    .replace(new RegExp(pattern, 'gi'), '<mark>$&</mark>');
+    .replace(new RegExp(pattern, flags), '<mark>$&</mark>');
