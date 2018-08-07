@@ -42,7 +42,7 @@ export default {
 }
 .pattern-box-wrapper {
   position: relative;
-  border-bottom: 1px solid #f7f7f718 !important;
+  border-bottom: 1px solid #f7f7f72d !important;
 }
 .error-text {
   position: absolute;
