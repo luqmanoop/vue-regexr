@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     ...mapMutations(['updateText']),
-    handleScroll(e) {
+    handleScroll() {
       this.$refs.backdrop.scrollTop = this.$refs.text.scrollTop;
     }
   }
